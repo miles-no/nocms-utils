@@ -1,4 +1,4 @@
-scrollTo: function (element, to, duration, cb) {
+const scrollTo = (element, to, duration, cb) => {
   const start = element.scrollTop;
   const change = to - start;
   const increment = 40;
