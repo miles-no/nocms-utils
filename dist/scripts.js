@@ -56,11 +56,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	const scrollTo = (element, to, duration, cb) => {
-	  const start = element.scrollTop;
-	  const change = to - start;
-	  const increment = 40;
-	  const easeInOut = function (currentTime, start, change, duration) {
+	var scrollTo = function scrollTo(element, to, duration, cb) {
+	  var start = element.scrollTop;
+	  var change = to - start;
+	  var increment = 40;
+	  var easeInOut = function easeInOut(currentTime, start, change, duration) {
 	    currentTime /= duration / 2;
 	    if (currentTime < 1) {
 	      return change / 2 * currentTime * currentTime + start;
@@ -69,9 +69,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return -change / 2 * (currentTime * (currentTime - 2) - 1) + start;
 	  };
 
-	  const animateScroll = function (elapsed) {
-	    const elapsedTime = elapsed + increment;
-	    const position = easeInOut(elapsedTime, start, change, duration);
+	  var animateScroll = function animateScroll(elapsed) {
+	    var elapsedTime = elapsed + increment;
+	    var position = easeInOut(elapsedTime, start, change, duration);
 
 	    if (element.nodeName === 'BODY') {
 	      document.body.scrollTop = position;
@@ -94,7 +94,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 	module.exports = {
-	  scrollTo
+	  scrollTo: scrollTo
 	};
 
 /***/ }
