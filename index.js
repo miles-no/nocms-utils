@@ -1,3 +1,5 @@
+'use strict';
+
 const scrollTo = (element, to, duration, cb) => {
   const start = element.scrollTop;
   const change = to - start;
