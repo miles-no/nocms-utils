@@ -93,8 +93,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  animateScroll(0);
 	};
 
+	var isBrowser = function isBrowser() {
+	  return typeof window !== 'undefined' && window.document && window.document.createElement;
+	};
+
 	module.exports = {
-	  scrollTo: scrollTo
+	  scrollTo: scrollTo,
+	  isBrowser: isBrowser
 	};
 
 /***/ }
