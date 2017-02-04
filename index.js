@@ -1,5 +1,3 @@
-'use strict';
-
 const scrollTo = (element, to, duration, cb) => {
   const start = element.scrollTop;
   const change = to - start;
@@ -37,6 +35,13 @@ const scrollTo = (element, to, duration, cb) => {
   animateScroll(0);
 }
 
+const isBrowser = () => {
+  return (typeof window !== 'undefined' &&
+    window.document &&
+    window.document.createElement);
+};
+
 module.exports = {
   scrollTo,
+  isBrowser,
 }
