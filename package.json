@@ -1,12 +1,13 @@
 {
   "name": "nocms-utils",
-  "version": "0.1.1",
+  "version": "0.0.0-semantic-release",
   "description": "Utility functions",
   "main": "dist/scripts.js",
   "scripts": {
     "test": "",
     "bump-version": "./node_modules/bump-version/bin/bump patch",
-    "build": "webpack"
+    "build": "webpack",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "devDependencies": {
     "babel-core": "^6.8.0",
@@ -17,8 +18,17 @@
     "eslint": "^3.12.2",
     "eslint-config-webteam": "git+https://github.com/miles-no/eslint-config-webteam.git",
     "eslint-plugin-import": "^2.2.0",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "semantic-release": "^6.3.6"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miles-no/nocms-utils.git"
+  },
+  "release": {
+    "verifyConditions": "condition-circle",
+    "debug": false
+  }
 }
