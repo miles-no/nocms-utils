@@ -2,7 +2,7 @@
   "name": "nocms-utils",
   "version": "0.0.0-semantic-release",
   "description": "Utility functions",
-  "main": "dist/scripts.js",
+  "main": "lib/scripts.js",
   "scripts": {
     "test": "",
     "build": "webpack",
@@ -11,6 +11,7 @@
     "eslint": "eslint ."
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.8.0",
     "babel-loader": "^6.2.4",
     "babel-register": "^6.8.0",
