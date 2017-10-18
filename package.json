@@ -2,7 +2,7 @@
   "name": "nocms-utils",
   "version": "0.0.0-semantic-release",
   "description": "Utility functions",
-  "main": "lib/scripts.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "",
     "build": "webpack",
