@@ -7,7 +7,8 @@
     "test": "",
     "bump-version": "./node_modules/bump-version/bin/bump patch",
     "build": "webpack",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "eslint": "eslint ."
   },
   "devDependencies": {
     "babel-core": "^6.8.0",
@@ -16,8 +17,8 @@
     "babel-register": "^6.8.0",
     "bump-version": "^0.5.0",
     "condition-circle": "^1.5.0",
-    "eslint": "^3.12.2",
-    "eslint-config-webteam": "^1.1.1",
+    "eslint": "^4.9.0",
+    "eslint-config-webteam": "^2.0.0",
     "eslint-plugin-import": "^2.2.0",
     "semantic-release": "^6.3.6",
     "webpack": "^1.13.0"

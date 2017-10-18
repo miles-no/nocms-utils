@@ -1,3 +1,7 @@
+/* eslint no-shadow: off */
+/* eslint no-param-reassign: off */
+/* eslint no-mixed-operators: off */
+/* eslint no-unused-expressions: off */
 const scrollTo = (element, to, duration, cb) => {
   const start = element.scrollTop;
   const change = to - start;
@@ -11,7 +15,7 @@ const scrollTo = (element, to, duration, cb) => {
     return -change / 2 * (currentTime * (currentTime - 2) - 1) + start;
   };
 
-  const animateScroll = function (elapsed) {
+  const animateScroll = (elapsed) => {
     const elapsedTime = elapsed + increment;
     const position = easeInOut(elapsedTime, start, change, duration);
 
@@ -25,7 +29,7 @@ const scrollTo = (element, to, duration, cb) => {
     }
 
     if (elapsedTime < duration) {
-      setTimeout(function () {
+      setTimeout(() => {
         animateScroll(elapsedTime);
       }, increment);
     } else {
@@ -33,7 +37,7 @@ const scrollTo = (element, to, duration, cb) => {
     }
   };
   animateScroll(0);
-}
+};
 
 const isBrowser = () => {
   return (typeof window !== 'undefined' &&
@@ -44,4 +48,4 @@ const isBrowser = () => {
 module.exports = {
   scrollTo,
   isBrowser,
-}
+};
