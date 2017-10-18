@@ -5,7 +5,6 @@
   "main": "dist/scripts.js",
   "scripts": {
     "test": "",
-    "bump-version": "./node_modules/bump-version/bin/bump patch",
     "build": "webpack",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "eslint": "eslint ."
