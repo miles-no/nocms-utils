@@ -45,7 +45,20 @@ const isBrowser = () => {
     window.document.createElement);
 };
 
+const urlify = (text) => {
+  const replace = {
+    '-': '-',
+    ' ': '-',
+    'æ': 'ae',
+    'ø': 'oe',
+    'å': 'aa',
+  };
+
+  return text.replace(/[^\w]/ig, chr => replace[chr] || '').toLowerCase();
+};
+
 module.exports = {
   scrollTo,
   isBrowser,
+  urlify,
 };
