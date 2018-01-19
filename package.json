@@ -4,7 +4,7 @@
   "description": "Utility functions",
   "main": "lib/index.js",
   "scripts": {
-    "test": "",
+    "test": "node test/",
     "build": "webpack",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "prepare": "babel ./src --out-dir ./lib --source-maps --presets env",
@@ -19,7 +19,8 @@
     "eslint": "^4.9.0",
     "eslint-config-webteam": "^2.0.0",
     "eslint-plugin-import": "^2.2.0",
-    "semantic-release": "^6.3.6"
+    "semantic-release": "^6.3.6",
+    "tape": "^4.8.0"
   },
   "author": "",
   "license": "ISC",

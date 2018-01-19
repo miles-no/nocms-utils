@@ -57,8 +57,17 @@ const urlify = (text) => {
   return text.replace(/[^\w]/ig, chr => replace[chr] || '').toLowerCase();
 };
 
+const paginate = (collection = [], pageSize, pageNumber = 1) => {
+  if (collection.length <= pageSize) {
+    return collection;
+  }
+  const pageNum = pageNumber - 1;
+  return collection.slice(pageNum * pageSize, (pageNum + 1) * pageSize);
+};
+
 module.exports = {
   scrollTo,
   isBrowser,
   urlify,
+  paginate,
 };
