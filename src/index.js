@@ -52,9 +52,12 @@ const urlify = (text) => {
     'æ': 'ae',
     'ø': 'oe',
     'å': 'aa',
+    'Æ': 'ae',
+    'Ø': 'oe',
+    'Å': 'aa',
   };
 
-  return text.replace(/[^\w]/ig, chr => replace[chr] || '').toLowerCase();
+  return text.toLowerCase().replace(/[^\w]/ig, chr => replace[chr] || '');
 };
 
 const paginate = (collection = [], pageSize, pageNumber = 1) => {

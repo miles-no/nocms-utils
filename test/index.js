@@ -1,5 +1,5 @@
 const test = require('tape');
-const { paginate } = require('../lib');
+const { paginate, urlify } = require('../lib');
 
 test('paginate returns whole array when size is equal to pageSize', (t) => {
   t.plan(1);
@@ -41,4 +41,9 @@ test('paginate returns paged subset of collection', (t) => {
   const expected = [7];
 
   t.deepEquals(actual, expected);
+});
+
+test('urlify should replace norwegian characters and spaces and convert to lowercase', (t) => {
+  t.plan(1);
+  t.equals(urlify('TEST ÆØÅæøå'), 'test-aeoeaaaeoeaa');
 });
