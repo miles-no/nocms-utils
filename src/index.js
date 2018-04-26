@@ -49,15 +49,15 @@ const urlify = (text) => {
   const replace = {
     '-': '-',
     ' ': '-',
-    'æ': 'ae',
-    'ø': 'oe',
-    'å': 'aa',
-    'Æ': 'ae',
-    'Ø': 'oe',
-    'Å': 'aa',
+    æ: 'ae',
+    ø: 'oe',
+    å: 'aa',
+    Æ: 'ae',
+    Ø: 'oe',
+    Å: 'aa',
   };
 
-  return text.toLowerCase().replace(/[^\w]/ig, chr => replace[chr] || '');
+  return text.toLowerCase().replace(/[^\w]/ig, chr => replace[chr] || ''); // eslint-disable-line
 };
 
 const paginate = (collection = [], pageSize, pageNumber = 1) => {
