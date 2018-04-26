@@ -6,20 +6,21 @@
   "scripts": {
     "test": "node test/",
     "build": "webpack",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "prepare": "babel ./src --out-dir ./lib --source-maps --presets env",
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "nsp": "nsp check"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.8.0",
     "babel-loader": "^6.2.4",
+    "babel-preset-env": "^1.6.1",
     "babel-register": "^6.8.0",
-    "condition-circle": "1.5.0",
     "eslint": "^4.9.0",
     "eslint-config-webteam": "^2.0.0",
     "eslint-plugin-import": "^2.2.0",
-    "semantic-release": "^6.3.6",
+    "nsp": "^3.2.1",
+    "semantic-release": "^15.1.7",
     "tape": "^4.8.0"
   },
   "author": "",
@@ -28,11 +29,5 @@
     "type": "git",
     "url": "https://github.com/miles-no/nocms-utils.git"
   },
-  "release": {
-    "verifyConditions": "condition-circle",
-    "debug": false
-  },
-  "dependencies": {
-    "babel-preset-env": "^1.6.1"
-  }
+  "dependencies": {}
 }
